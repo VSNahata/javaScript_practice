@@ -63,3 +63,8 @@ num1 = num2 = num3 = 2 + 2
 let gameCounter = 100
 ++gameCounter;
 console.log(gameCounter);
+//**************************comparisons********************/
+console.log(null > 0); // false
+console.log(null == 0); // false 
+console.log(null >= 0); // true comparison operator works differently , they first convert
+// null to a number
