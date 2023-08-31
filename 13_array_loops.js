@@ -80,3 +80,33 @@ const yehBhi =[
 yehBhi.forEach( (item) => {
     console.log(`key is : ${item.languageName} and the value is : ${item.languageFileName}`)
 } )
+
+
+// for each ke andar dikkat yeh hai ki usme break statement use nahi kar sakte..isliye filter ka istemal karte hai  
+
+
+// let temp = coding.forEach(function (item) {   for each loop koi item return nahi karta hai
+//     return item  
+    
+// });
+// console.log(temp)
+
+const newNums = [1,2,3,4,5,6]
+const myNums = newNums.filter( (item) => (item>4) )  //filter array bana ke de deta hai jo bhi condition satisfy karta hai
+console.log(myNums)
+
+
+//same cheej ko agar for each loop se karna hota toh
+const newerNums =[]
+newNums.forEach((item)=>{
+    if(item>4)
+    newerNums.push(item)
+})
+console.log(newerNums)
+
+//maps( yeh bhi for eack ke tarah hi hai and value return kar ke de deta hai )
+const newArr = newerNums.map((item)=>(item+10)).map((item)=>(item+1)) // chaining
+console.log(newArr)
+
+// reduce wahi hai bs result value and current value ke beech kuch operation kar raha hai 
+console.log(newerNums.reduce((acc, curval)=>(acc + curval),0))
