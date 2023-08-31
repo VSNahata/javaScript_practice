@@ -55,3 +55,22 @@ console.log(handleObject({
     name:"varun",
     price: 2
 }))
+
+function one(){
+    let username = "varun"
+    function two(){
+        console.log(username) // nested function global variable ko access kar sakte hai.
+    }
+    two()
+}
+one()
+
+// ek concept aata hai hoisting ka that is basically tum function ko define karke
+// kahin bhi call kar sakte ho but agar tumne function ko aise define kiya hai toh
+// variable initialise karne ke baad hi tum function ko call kar sakte ho.
+
+// console.log(funcOne())
+const funcOne = function(){
+    return ("hello")
+}
+console.log(funcOne())
